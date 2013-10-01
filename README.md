@@ -37,12 +37,12 @@ Here's the partial (optional) ( path : `App/Template/CoolPartial.hbs` )
 </div>
 ```
 
-Include the `hbs.js` plugin and the `Handlebars.js` file in the same directory as your require.js script is. Usually, this is similar to the following.
+Include the `hbs.js` plugin and the `handlebars.js` file in the same directory as your require.js script is. Usually, this is similar to the following.
 
 ```sh
 ~/Code/scripts/require.js
 ~/Code/scripts/hbs.js
-~/Code/scripts/Handlebars.js
+~/Code/scripts/handlebars.js
 ~/Code/scripts/App/Template/One.hbs
 ~/Code/scripts/App/Template/CoolPartial.hbs
 ```
@@ -103,7 +103,7 @@ Just put your helpers in `template/helpers/*` and they'll automagically get pull
 I find that many helpers are good helpers in regular code as well, so the following is a good practice:
 
 ```javascript
-define('template/helpers/roundNumber', ['Handlebars'], function ( Handlebars ) {
+define('template/helpers/roundNumber', ['handlebars'], function ( Handlebars ) {
   function roundNumber ( context, options ) {
     // Simple function for example
     return Math.round( context );

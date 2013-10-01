@@ -20,7 +20,7 @@
 
     paths: {
       "hbs": "../hbs",
-      "Handlebars" : "../Handlebars",
+      "handlebars" : "../handlebars",
       "underscore" : "../hbs/underscore",
       "i18nprecompile" : "../hbs/i18nprecompile",
       "json2" : "../hbs/json2"
