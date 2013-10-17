@@ -1,4 +1,4 @@
-//>>excludeStart('excludeAfterBuild', pragmas.excludeAfterBuild)
+//>>excludeStart('hbsExcludeAfterBuild', pragmas.hbsExcludeAfterBuild)
 (function () {
 /*
 
@@ -2289,4 +2289,4 @@ define(function(){
 });
 
 })();
-//>>excludeEnd('excludeAfterBuild')
+//>>excludeEnd('hbsExcludeAfterBuild')

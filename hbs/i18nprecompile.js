@@ -1,4 +1,4 @@
-//>>excludeStart('excludeAfterBuild', pragmas.excludeAfterBuild)
+//>>excludeStart('hbsExcludeAfterBuild', pragmas.hbsExcludeAfterBuild)
 define(['handlebars', "./underscore"], function ( Handlebars, _ ) {
 
   function replaceLocaleStrings ( ast, mapping, options ) {
@@ -42,4 +42,4 @@ define(['handlebars', "./underscore"], function ( Handlebars, _ ) {
     return new Handlebars.JavaScriptCompiler().compile(environment, options);
   };
 });
-//>>excludeEnd('excludeAfterBuild')
+//>>excludeEnd('hbsExcludeAfterBuild')

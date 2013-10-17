@@ -10,15 +10,15 @@
 /*global require: false, XMLHttpRequest: false, ActiveXObject: false,
 define: false, process: false, window: false */
 define([
-  //>>excludeStart('excludeAfterBuild', pragmas.excludeAfterBuild)
+  //>>excludeStart('hbsExcludeAfterBuild', pragmas.hbsExcludeAfterBuild)
   'handlebars', './hbs/underscore', './hbs/i18nprecompile', './hbs/json2'
-  //>>excludeEnd('excludeAfterBuild')
+  //>>excludeEnd('hbsExcludeAfterBuild')
 ], function (
-  //>>excludeStart('excludeAfterBuild', pragmas.excludeAfterBuild)
+  //>>excludeStart('hbsExcludeAfterBuild', pragmas.hbsExcludeAfterBuild)
   Handlebars, _, precompile, JSON
-  //>>excludeEnd('excludeAfterBuild')
+  //>>excludeEnd('hbsExcludeAfterBuild')
 ) {
-//>>excludeStart('excludeAfterBuild', pragmas.excludeAfterBuild)
+//>>excludeStart('hbsExcludeAfterBuild', pragmas.hbsExcludeAfterBuild)
   var fs, getXhr,
         progIds = ['Msxml2.XMLHTTP', 'Microsoft.XMLHTTP', 'Msxml2.XMLHTTP.4.0'],
         fetchText = function () {
@@ -118,7 +118,7 @@ define([
       }
     };
     var styleList = [], styleMap = {};
-//>>excludeEnd('excludeAfterBuild')
+//>>excludeEnd('hbsExcludeAfterBuild')
 
       return {
 
@@ -137,7 +137,7 @@ define([
         version: '0.4.0',
 
         load: function (name, parentRequire, load, config) {
-          //>>excludeStart('excludeAfterBuild', pragmas.excludeAfterBuild)
+          //>>excludeStart('hbsExcludeAfterBuild', pragmas.hbsExcludeAfterBuild)
 
             var compiledName = name + customNameExtension,
                 disableI18n = (config.hbs && config.hbs.disableI18n),
@@ -482,7 +482,7 @@ define([
                   }
                 }
             }
-          //>>excludeEnd('excludeAfterBuild')
+          //>>excludeEnd('hbsExcludeAfterBuild')
         }
       };
 });

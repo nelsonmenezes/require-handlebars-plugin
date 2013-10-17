@@ -9,7 +9,7 @@
     inlineText: true,
 
     pragmasOnSave: {
-        excludeAfterBuild: true
+        hbsExcludeAfterBuild: true
     },
 
     paths: {

@@ -1,4 +1,4 @@
-//>>excludeStart('excludeAfterBuild', pragmas.excludeAfterBuild)
+//>>excludeStart('hbsExcludeAfterBuild', pragmas.hbsExcludeAfterBuild)
 /*
 I have no idea why this dependency can't be met without this, but for now it works.
 Keep it updated with all of your helpers.
@@ -17,4 +17,4 @@ define([
 ], function(){
   return {};
 });
-//>>excludeEnd('excludeAfterBuild')
+//>>excludeEnd('hbsExcludeAfterBuild')

@@ -1,4 +1,4 @@
-//>>excludeStart('excludeAfterBuild', pragmas.excludeAfterBuild)
+//>>excludeStart('hbsExcludeAfterBuild', pragmas.hbsExcludeAfterBuild)
 /*
     http://www.JSON.org/json2.js
     2011-10-19
@@ -360,6 +360,6 @@ define(function(){
     return JSON;
 });
 // otherwise just leave it alone
-    
+
 }).call(this, this);
-//>>excludeEnd('excludeAfterBuild')
+//>>excludeEnd('hbsExcludeAfterBuild')
