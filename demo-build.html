@@ -3,7 +3,7 @@
 <head>
   <meta charset=utf-8 />
   <title>Demo App (built) for require-handlebars-plugin</title>
-  <link href="/demo-build/styles/screen.build.css" rel="stylesheet" type="text/css" />
+  <link href="demo-build/styles/screen.build.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div id="demo-app-container"></div>
@@ -12,12 +12,11 @@
 <!-- use a common require.js and app injection method. -->
 <script>require = {
   locale : "en_ca",
-  // I change the path as to not duplicate the hbs.js and handlebars plugin.
-  // Normally, just drop it in the same place as require.js and it'll work fine.
-  // Essentially just ignore this.
+  // handlebars and handlebars.runtime are required as named modules
   paths  : {
     'hbs' : '../hbs',
-    'handlebars' : '../handlebars'
+    'handlebars' : '../handlebars',
+    'handlebars.runtime' : '../handlebars.runtime'
   }
 };</script>
 <script src="demo-build/require.js" data-main="demo-build/main.js"></script>

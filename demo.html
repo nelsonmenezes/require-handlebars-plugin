@@ -17,16 +17,11 @@
     // won't work as well.
     disableI18n : false
   },
-  // I change the path as to not duplicate the hbs.js and handlebars plugin.
-  // Normally, just drop it in the same place as require.js and it'll work fine.
-  // Essentially just ignore this.
+  // handlebars and handlebars.runtime are required as named modules
   paths  : {
     'hbs' : '../hbs',
-    'handlebars' : '../handlebars',
-    'underscore' : '../hbs/underscore',
-    'i18nprecompile' : '../hbs/i18nprecompile',
-    'json2' : '../hbs/json2'
-
+    'handlebars' : '../hbs/handlebars',
+    'handlebars.runtime' : '../hbs/handlebars.runtime'
   }
 };</script>
 <!-- use a common require.js and app injection method. -->

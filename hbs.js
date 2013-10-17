@@ -10,15 +10,15 @@
 /*global require: false, XMLHttpRequest: false, ActiveXObject: false,
 define: false, process: false, window: false */
 define([
-//>>excludeStart('excludeHbs', pragmas.excludeHbs)
-'Handlebars', 'underscore', 'i18nprecompile', 'json2'
-//>>excludeEnd('excludeHbs')
+  //>>excludeStart('excludeAfterBuild', pragmas.excludeAfterBuild)
+  'handlebars', './hbs/underscore', './hbs/i18nprecompile', './hbs/json2'
+  //>>excludeEnd('excludeAfterBuild')
 ], function (
-//>>excludeStart('excludeHbs', pragmas.excludeHbs)
- Handlebars, _, precompile, JSON
-//>>excludeEnd('excludeHbs')
+  //>>excludeStart('excludeAfterBuild', pragmas.excludeAfterBuild)
+  Handlebars, _, precompile, JSON
+  //>>excludeEnd('excludeAfterBuild')
 ) {
-//>>excludeStart('excludeHbs', pragmas.excludeHbs)
+//>>excludeStart('excludeAfterBuild', pragmas.excludeAfterBuild)
   var fs, getXhr,
         progIds = ['Msxml2.XMLHTTP', 'Microsoft.XMLHTTP', 'Msxml2.XMLHTTP.4.0'],
         fetchText = function () {
@@ -118,7 +118,7 @@ define([
       }
     };
     var styleList = [], styleMap = {};
-//>>excludeEnd('excludeHbs')
+//>>excludeEnd('excludeAfterBuild')
 
       return {
 
@@ -137,7 +137,7 @@ define([
         version: '0.4.0',
 
         load: function (name, parentRequire, load, config) {
-          //>>excludeStart('excludeHbs', pragmas.excludeHbs)
+          //>>excludeStart('excludeAfterBuild', pragmas.excludeAfterBuild)
 
             var compiledName = name + customNameExtension,
                 disableI18n = (config.hbs && config.hbs.disableI18n),
@@ -396,7 +396,7 @@ define([
                       prec = precompile( text, mapping, options);
 
                   text = "/* START_TEMPLATE */\n" +
-                         "define(['hbs','Handlebars'"+depStr+helpDepStr+"], function( hbs, Handlebars ){ \n" +
+                         "define(['hbs','handlebars.runtime'"+depStr+helpDepStr+"], function( hbs, Handlebars ){ \n" +
                            "var t = Handlebars.template(" + prec + ");\n" +
                            "Handlebars.registerPartial('" + name.replace( /\//g , '_') + "', t);\n" +
                            debugProperties +
@@ -463,26 +463,26 @@ define([
             if (disableI18n){
                 fetchAndRegister(false);
             } else {
-            	// Workaround until jam is able to pass config info or we move i18n to a separate module.
-            	// This logs a warning and disables i18n if there's an error loading the language file
-            	var langMapPath = (config.hbs && config.hbs.i18nDirectory ? config.hbs.i18nDirectory : i18nDirectory) + (config.locale || "en_us") + '.json';
-            	try {
-					fetchOrGetCached(parentRequire.toUrl(langMapPath), function (langMap) {
-					  fetchAndRegister(JSON.parse(langMap));
-					});
+              // Workaround until jam is able to pass config info or we move i18n to a separate module.
+              // This logs a warning and disables i18n if there's an error loading the language file
+              var langMapPath = (config.hbs && config.hbs.i18nDirectory ? config.hbs.i18nDirectory : i18nDirectory) + (config.locale || "en_us") + '.json';
+              try {
+          fetchOrGetCached(parentRequire.toUrl(langMapPath), function (langMap) {
+            fetchAndRegister(JSON.parse(langMap));
+          });
                 } catch(er) {
-                	// if there's no configuration at all, log a warning and disable i18n for this and subsequent templates
-                	if(!config.hbs) {
-                		console.warn('hbs: Error reading ' + langMapPath + ', disabling i18n. Ignore this if you\'re using jam, otherwise check your i18n configuration.\n');
-						config.hbs = {disableI18n: true};
-                		fetchAndRegister(false);
-                	} else {
-                		throw er;
+                  // if there's no configuration at all, log a warning and disable i18n for this and subsequent templates
+                  if(!config.hbs) {
+                    console.warn('hbs: Error reading ' + langMapPath + ', disabling i18n. Ignore this if you\'re using jam, otherwise check your i18n configuration.\n');
+            config.hbs = {disableI18n: true};
+                    fetchAndRegister(false);
+                  } else {
+                    throw er;
 
-                	}
+                  }
                 }
             }
-          //>>excludeEnd('excludeHbs')
+          //>>excludeEnd('excludeAfterBuild')
         }
       };
 });
